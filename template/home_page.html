@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}<br> post your task {% endblock title %}
+
+{% block content%}
+
+{% include 'nav_bar.html' %}
+
+<P align="center"> THIS IS PROFILE DETAILS </P>
+{% for i in post %}
+<div>
+    <p style="border:1px solid blue;">
+        <h3>{{i.post_title}}</h3>
+        <p>{{ i.date_published }}</p>
+        <p>{{ i.post_content }}</p>
+        <p> Posted By {{i.user_name}}</p>
+        <p>Visited profile <a href='i' >{{i.user_profilr_link }}</a>
+        </p>
+
+    </p>
+</div>
+{% endfor %}
+{% endblock content %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+    {% include 'nav_bar.html' %}
+
+<div style="margin-top:80px; width:900px; margin:80px auto;">
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset>
+            <legend> Login Below </legend>
+
+            {{ form | crispy }}
+
+        </fieldset>
+        <div>
+            <button class="but" type="submit" style="background-color:red;margin-left:auto;margin-right:auto;display:block;margin-top:5%;margin-bottom:0%">log IN Hear!</button>
+        </div>
+    </form>
+</div>
+{% endblock content %}
